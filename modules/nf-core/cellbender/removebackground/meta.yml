@@ -113,7 +113,7 @@ output:
       - ckpt.tar.gz:
           type: file
           description: Checkpoint file which contains the trained model and the full posterior.
-          pattern: "*.ckpt.tar.gz"
+          pattern: "ckpt.tar.gz"
           ontologies: []
   versions_cellbender:
     - - ${task.process}:
@@ -141,3 +141,27 @@ authors:
 maintainers:
   - "@nictru"
   - "@jaredfischbach"
+containers:
+  docker:
+    linux/amd64:
+      name: community.wave.seqera.io/library/cellbender_python_webcolors:a114221c4c31ab91
+      build_id: bd-a114221c4c31ab91_1
+      scan_id: sc-6496743368797852_1
+    linux/arm64:
+      name: community.wave.seqera.io/library/cellbender_python_webcolors:388f6c567173b773
+      build_id: bd-388f6c567173b773_1
+      scan_id: sc-ae64248a6fe95bb0_1
+  singularity:
+    linux/arm64:
+      name: oras://community.wave.seqera.io/library/cellbender_python_webcolors:ac806304d9d36151
+      build_id: bd-ac806304d9d36151_1
+      https: https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/90/90832edebede0b11e89fe536ee93b466345bc819a19e09306999ea089da76f12/data
+    linux/amd64:
+      name: oras://community.wave.seqera.io/library/cellbender_python_webcolors:66fc70090a0259d9
+      build_id: bd-66fc70090a0259d9_1
+      https: https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/b0/b01fb7d6f34ec2485438a09ad1494aa2c897a9b793069f9caef677bcd8d6784d/data
+  conda:
+    linux/amd64:
+      lock_file: modules/nf-core/cellbender/removebackground/.conda-lock/linux_amd64-bd-a114221c4c31ab91_1.txt
+    linux/arm64:
+      lock_file: modules/nf-core/cellbender/removebackground/.conda-lock/linux_arm64-bd-388f6c567173b773_1.txt

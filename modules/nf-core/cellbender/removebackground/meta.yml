@@ -119,7 +119,7 @@ output:
           type: file
           description: Checkpoint file which contains the trained model and the
             full posterior.
-          pattern: "*.ckpt"
+          pattern: "*.ckpt.tar.gz"
           ontologies: []
   versions_cellbender:
     - - ${task.process}:
@@ -146,3 +146,4 @@ authors:
   - "@nictru"
 maintainers:
   - "@nictru"
+  - "@jaredfischbach"

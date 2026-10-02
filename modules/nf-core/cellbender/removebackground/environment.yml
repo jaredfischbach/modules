@@ -4,5 +4,5 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - bioconda::cellbender=0.3.2
-  - conda-forge::webcolors=1.13
+  - bioconda::cellbender=0.4.0
+  - conda-forge::webcolors=25.10.0
